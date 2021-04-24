@@ -6,8 +6,6 @@
 
 JS Canvas Bootstrap for FPS Mobile Games.
 
-</br>
-
 ## Features
 
 CANVAS-FPS-MOLD features:
@@ -16,7 +14,6 @@ CANVAS-FPS-MOLD features:
   * [SCENE BACKGROUP ID PROCESSING](https://github.com/LeadShuriken/canvas-fps-mold/blob/main/img/scene_elements/scene_2/background_id.jpg?raw=true) - Identifying surface on which characters can spawn. And where these characters can venture off to.
   * [SCENE BACLGROUP DEPTH PROCESSING](https://github.com/LeadShuriken/canvas-fps-mold/blob/main/img/scene_elements/scene_2/background_z.jpg?raw=true) - Allowing Scale to affect spawned creatures, bullet holes etc.
   * [WEAPON HANDLING BASED ON TEMPLATE AND MAGNIFICATION] - HAHAHA Need I say more )
-  * 
-### Todos
 
+### Todos
 Some bug fixing and proof scenerios for skin changes.
