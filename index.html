@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+
+    <body>
+        <div id="gun_em">
+            <div id="canvas_holder">
+                <canvas id="canvas_2" moz-opaque>
+                    Your browser does not support the HTML5 canvas tag.
+                </canvas>
+                <canvas id="canvas_1">
+                    Your browser does not support the HTML5 canvas tag.
+                </canvas>
+                <canvas id="canvas">
+                    Your browser does not support the HTML5 canvas tag.
+                </canvas>
+                <canvas id="trigger_canvas">
+                    Your browser does not support the HTML5 canvas tag.
+                </canvas>
+            </div>
+            <div id="flash-cutter">
+                <img id="flash_placement"/>
+            </div>
+            <div class="gun-frame-0" id="gun_placement"></div>
+            <div id="termometer">
+                <img id="termometer_numbers" src="img/misc/termometer_numbers.png"/>
+                <div id="termometer_mercury"></div>
+            </div>
+            <!-- <img id="start_game" src="img/misc/start_game.png"/> -->
+            <img id="end_game" src="img/misc/end_game.png"/>
+        </div>
+        <div id="game_handler"></div>
+        <script>
+            var scripts = [
+                'resources.js',
+                'event_handling.js',
+                'main.js',
+                'particles.js',
+                'enemy_spawn.js',
+                'gun_handling.js',
+                'input.js'
+            ];
+            var src;
+            var script;
+            var pendingScripts = [];
+            var firstScript = document.scripts[0];
+
+            // Watch scripts load in IE
+            function stateChange() {
+            // Execute as many scripts in order as we can
+            var pendingScript;
+            while (pendingScripts[0] && pendingScripts[0].readyState == 'loaded') {
+                pendingScript = pendingScripts.shift();
+                // avoid future loading events from this script (eg, if src changes)
+                pendingScript.onreadystatechange = null;
+                // can't just appendChild, old IE bug if element isn't closed
+                firstScript.parentNode.insertBefore(pendingScript, firstScript);
+                }
+            }
+
+            // loop through our script urls
+            while (src = scripts.shift()) {
+                if ('async' in firstScript) { // modern browsers
+                    script = document.createElement('script');
+                    script.async = false;
+                    script.src = src;
+                    document.head.appendChild(script);
+                }
+                else if (firstScript.readyState) { // IE<10
+                    // create a script and add it to our todo pile
+                    script = document.createElement('script');
+                    pendingScripts.push(script);
+                    // listen for state changes
+                    script.onreadystatechange = stateChange;
+                    // must set src AFTER adding onreadystatechange listener
+                    // else we’ll miss the loaded event for cached scripts
+                    script.src = src;
+                } else { // fall back to defer
+                    document.write('<script src="' + src + '" defer></'+'script>');
+                }
+            }
+        </script>
+    </body>
+</html>

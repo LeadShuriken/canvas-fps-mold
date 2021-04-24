@@ -1,0 +1,124 @@
+canvas {
+   position: absolute;
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none;
+}
+
+#trigger_canvas {
+}
+
+#game_handler {
+    position: absolute;
+    width: 900px;
+    height: 488px;
+    opacity: 0;
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none;
+    cursor: crosshair;
+}
+
+#gun_em {
+    overflow: hidden;
+    position: absolute;
+    width: 900px;
+    height: 488px;
+    border-radius: 10px;
+    border: solid black 2px;
+
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none;
+}
+
+#end_game {
+    display: none;
+    position: absolute;
+    opacity: 0;
+
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none;
+}
+
+#termometer {
+    position: absolute;
+    width: 50px;
+    background-image: url("img/misc/termometer.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 840px;
+    top: 16px;
+    height: 250px;
+}
+
+#termometer_numbers {
+    clip: rect(186px, 100px, 206px, 0px);
+
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+
+    position: absolute;
+    width: 50px;
+    height: 243px;
+    left: 0px;
+    bottom: 7px;
+}
+
+.shooting_hand {
+    position: relative;
+    left: 350px;
+    bottom: 180px;
+
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none; 
+}
+
+#gun_placement {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 400px;
+    top: 288px;
+    height: 220px;
+    left: 240px;
+}
+
+.gun-frame-0 { background-position: 0 0; }
+.gun-frame-1 { background-position: -400px 0; } 
+.gun-frame-2 { background-position: -800px 0; } 
+.gun-frame-3 { background-position: -1200px 0; } 
+.gun-frame-4 { background-position: -1600px 0; } 
+.gun-frame-5 { background-position: -2000px 0; } 
+.gun-frame-6 { background-position: -2400px 0; } 
+.gun-frame-7 { background-position: -2800px 0; } 
+.gun-frame-8 { background-position: -3200px 0; } 
+.gun-frame-9 { background-position: -3600px 0; } 
+.gun-frame-10 { background-position: -4000px 0; } 
+
+#flash-cutter {
+    position: absolute;
+    width: 200px;
+    top: 355px;
+    height: 200px;
+    left: 340px;
+    overflow: hidden;
+}
+
+#flash_placement {
+    position: absolute;
+}
