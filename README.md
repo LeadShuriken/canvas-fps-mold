@@ -16,6 +16,6 @@ CANVAS-FPS-MOLD features:
   * [WEAPON HANDLING BASED ON TEMPLATE AND MAGNIFICATION](https://github.com/LeadShuriken/canvas-fps-mold/blob/main/img/gun_elements/machine_gun/sprite-gun-animation.png?raw=true) - HAHAHA Need I say more )
 
 ### Todos
-Some bug fixing and proof scenerios for skin changes.
+Some bug fixing and proof scenerios for skin changes. Unsteal Metal Gear Solid tank sprites for demo.
 
 ### Enjoy
