@@ -4,7 +4,7 @@
 
 ## Description
 
-JS Canvas Bootstrap for FPS Mobile Games.
+JS Canvas Bootstrap for FPS Web Games.
 
 ## Features
 
